@@ -1,5 +1,10 @@
+/* Author: Shagun Bhardwaj(18csu202)
+   Version:1.0.0
+   Purpose: Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. 
+*/
 import java.util.Scanner;
-public class prog3{
+public class cmp_decimals
+{
 public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);

@@ -1,4 +1,4 @@
-class Program1
+class sum
 {
   public static void main(String args[]) 
   {
@@ -6,7 +6,7 @@ class Program1
     num1 = 100;
     num2 = 200;
     sum = num1 + num2;
-    System.out.print("The sum of numbers is ");
+    System.out.print("The sum of 100 and 200 is ");
     System.out.println(sum);
   }
 }

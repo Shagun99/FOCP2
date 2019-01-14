@@ -1,4 +1,4 @@
-class Program3
+class primitive_datatypes
 {
   public static void main(String args[]) 
   {

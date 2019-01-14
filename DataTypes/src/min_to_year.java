@@ -1,4 +1,4 @@
-class Program4
+class min_to_year
 {
   public static void main(String args[]) 
   {
