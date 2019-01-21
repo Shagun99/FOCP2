@@ -1,3 +1,8 @@
+/* Author: Shagun Bhardwaj(18csu202)
+   Version:1.0.0
+   Purpose:  
+*/
+
 class Date 
 {
  
@@ -11,13 +16,13 @@ class Date
         this.day = day;
         this.year = year;
     }
-
-    /*Date()
+/*
+    Date()
     {
         this.day = 01;
         this.month = 01;
         this.year = 2000;
-    }*/
+    }
 
     public void setDay (int day) 
     {
@@ -33,7 +38,7 @@ class Date
     {
         month = month;
     }
-     
+
     public int getMonth() 
     {
         return month;
@@ -48,7 +53,7 @@ class Date
     {
         return year;
     }
-     
+*/     
     public String displayDate () 
     {
         return (day + "/" + month + "/" + year);

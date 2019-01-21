@@ -1,5 +1,11 @@
+/* Author: Shagun Bhardwaj(18csu202)
+   Version:1.0.0
+   Purpose:  
+*/
+
 class Qualification
 {
+
 	String qualName;
 	String university;
 	String institute;
@@ -19,7 +25,7 @@ class Qualification
         this.university = "NorthCap University";
         this.institute = "ABC Institute" ;
   		this.cgpa = 9.4;
-  	}*/
+  	}
 
   	public void setQualname(String qualName)
   	{
@@ -59,5 +65,11 @@ class Qualification
   	public float getCgpa()
   	{
   		return cgpa;
-  	}
+  	}*/
+
+  	public String displayQualifications()
+	{
+		System.out.println("Qualification Name: " + qualName + "\nUniversity Name: " + university + "\nInstitute Name: " + institute + "\nCGPA: " + cgpa);
+		return "";
+	}
 }
