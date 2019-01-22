@@ -8,10 +8,10 @@ class Student
 
 	String firstName;
 	String lastName;
-	//String line1, line2, city, state;
+	String line1, line2, city, state;
 	Address addr;
-	//int pinCode;
-	//int daydob, monthdob, yeardob;
+	int pinCode;
+	int daydob, monthdob, yeardob;
 	Date dob;
 	String[] skills;
 	Qualification[] qual;
@@ -130,23 +130,48 @@ class Student
 	{
 		return addr;
 	}
-	
-	public Date getDob()
-	{
-		return dob;
-	}
 */
-	public void setSkills(String[] sk)
+	public void setDob(int daydob, int monthdob, int yeardob)
 	{
-		skills = sk;
+		this.daydob = daydob;
+		this.monthdob = monthdob;
+		this.yeardob = yeardob;
 	}
 
-	public String[] getSkills()
+	public String getDob()
 	{
-		//for (int i= 0; i< k; i++) 
-//		{
-			return skills;
-//		}
+		dob.setDate(daydob, monthdob, yeardob);
+		return dob.displayDate();
+	}
+
+
+	public void setAddress(String line1, String line2, String city, String state, int pinCode )
+	{
+		this.line1 = line1;
+		this.line2 = line2;
+		this.city = city;
+		this.state = state;
+		this.pinCode = pinCode;
+	}
+
+	public Address getAddr()
+	{
+		System.out.println("Line1: " + line1 + "\nLine2: " + line2 + "\nCity: " + city + "\nState: " + state + "\nPincode: " + pinCode);
+		return addr;
+	}
+
+	public void setSkills(String[] sk)
+	{
+		this.skills = sk;
+	}
+
+	public void getSkills(int s)
+	{
+		//for (int i= 0; i< s; i++) 
+		//{
+		System.out.println(skills);
+		//	return skills;
+		//}
 	}
 
 	public void setQual(Qualification[] ql)
@@ -192,11 +217,18 @@ class Student
 	{
 		int i;
 
-		System.out.println("Student Name: " + firstName + " " + lastName);
-		System.out.println("Date of birth: " + dob);
-		System.out.println("Address: " + addr);
-		System.out.println("Skills: " + getSkills());
-		System.out.println("Qualifications: ");
+		System.out.println("\nStudent Name: " + firstName + " " + lastName);
+		System.out.println("Date of birth: " + dob.displayDate());
+		System.out.println("Email: " + eMail);
+		System.out.println("Contact Number: " + contactNo);		
+		System.out.println("Address ");
+		System.out.println(addr.displayAddress());
+		System.out.println("Skills: ");
+		for(i= 0; i< s; i++)
+		{
+		System.out.println(skills[i]);
+		}
+		System.out.println("\nQualifications ");
 		for(i= 0; i< q; i++)
 		{
 		System.out.println(qual[i].displayQualifications());

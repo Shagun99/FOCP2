@@ -17,7 +17,7 @@ class Address
         this.line1= line1;
         this.line2= line2;
         this.city= city;
-  		this.state= state;
+  		  this.state= state;
         this.pinCode= pinCode;
     }
 /*
@@ -29,16 +29,16 @@ class Address
   		this.state= "Haryana";
         this.pinCode= 122001;
     }
-
+*/
     public void setAddr(String line1, String line2, String city, String state, int pinCode)
     {
-      line1 = line1; 
-      line2 = line2;
-      city= city;
-      state= state; 
-      pinCode = pinCode;
+      this.line1 = line1; 
+      this.line2 = line2;
+      this.city= city;
+      this.state= state; 
+      this.pinCode = pinCode;
     }
-
+/*
     public String getAddr()
     {
       line1= line1;
@@ -50,9 +50,11 @@ class Address
     }
 */
 
-    void displayAddress()
+    public String displayAddress()
     {
-    	System.out.println(line1 + " " + line2 + " " + city + " " + state + " " + pinCode);
+      System.out.println("Line1: " + line1 + "\nLine2: " + line2 + "\nCity: " + city + "\nState: " + state + "\nPincode: " + pinCode);
+      return "";
+    	//System.out.println(line1 + " " + line2 + " " + city + " " + state + " " + pinCode);
     }
 
 }

@@ -53,7 +53,19 @@ class Date
     {
         return year;
     }
-*/     
+*/   
+    public void setDate (int day, int month, int year) 
+    {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+     
+   // public void getDate() 
+    //{
+        
+    //}
+
     public String displayDate () 
     {
         return (day + "/" + month + "/" + year);

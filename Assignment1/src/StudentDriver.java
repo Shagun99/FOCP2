@@ -121,15 +121,19 @@ public class StudentDriver
 				l = data.nextInt();
 
 				String[] resp = new String[l];
-		//		System.out.println("Enter responsibilities");
+				System.out.println("Enter responsibilities");
 		//		String responsibilities;
 
 				for (j= 0; j< l; j++) 
 				{
-					resp[j] = data.nextLine();
+					resp[j] = data.next();
 				}
 
 				pr[m] = new Project(name, startday, startmonth, startyear, endday, endmonth, endyear, role, l);
+				pr[m].setStart(startday, startmonth, startyear);
+				pr[m].setEnd(endday, endmonth, endyear);
+				//pr[m].setNresp(l);
+
 			}
 			
 		//	Project projects= new Project(name, startday, startmonth, startyear, endday, endmonth, endyear, role, responsibilities);
@@ -144,6 +148,8 @@ public class StudentDriver
 		student[i].setProject(pr);
 		student[i].setSkills(sk);
 		student[i].setQual(ql);
+		student[i].setDob(daydob, monthdob, yeardob);
+		student[i].setAddress(line1, line2, city, state, pinCode);
 		student[i].displayDetails(p, q, s);
 
 		}

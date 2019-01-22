@@ -8,6 +8,7 @@ class Project
 	String name;
 	Date startDate;
 	Date endDate;
+	int startday, startmonth, startyear, endday, endmonth, endyear, r;
 	String role;
 	String[] responsibilities;
 
@@ -18,16 +19,17 @@ class Project
 		this.endDate = new Date(endday, endmonth, endyear);
 		this.role = role;
 		this.responsibilities = new String[j];
+		this.r = j;
 	}
-/*	Project()
+	Project()
 	{
 		this.name = "";
-		this.startDate = 01/01/2000;
-		this.endDate = 01/01/2001;
-		this.role = "Manager";
-		this.responsibilities = "";
+		this.startDate = new Date(01,01,2000);
+		this.endDate = new Date(01,01,2000);
+		this.role = "";
+		this.responsibilities = new String[100];
 	}
-
+/*
 	public void setName(String name)
 	{
 		name = name;
@@ -37,26 +39,39 @@ class Project
 	{
 		role = role;
 	}
-	
+*/
 	public void setStart(int startday, int startmonth, int startyear)
 	{
-		startDate = startDate;
+		this.startday = startday;
+		this.startmonth = startmonth;
+		this.startyear = startyear;
 	}
 	
 	public void setEnd(int endday, int endmonth, int endyear)
 	{
-		endDate = endDate;
+		this.endday = endday;
+		this.endmonth = endmonth;
+		this.endyear = endyear;	
 	}
-*/
 
 	public void setResp(String[] resp)
 	{
-		//for (int i= 0; i< j; i++) 
-		//{
-			responsibilities = resp;
-		//}
+		for (int i= 0; i< r; i++) 
+		{
+			this.responsibilities[i] = resp[i];
+		}
 	}
 /*
+	public void setNresp(int l)
+	{
+		this.l = l;
+	}
+
+	public int getNresp()
+	{
+		return l;
+	}
+
 	public String getName()
 	{
 		return name;
@@ -88,18 +103,21 @@ class Project
 
 	public String displayProjects()
 	{
-		//int i;
+		int i; 
+		//Project p = new Project();
 		System.out.println("Name of project: "+ name);
 		System.out.println("Start date: ");
-		startDate.displayDate();
+		System.out.println(startDate.displayDate());
 		System.out.println("End date: ");
-		endDate.displayDate();
+		System.out.println(endDate.displayDate());
 		System.out.println("Role: "+ role);		
 		System.out.println("Responsibilities: ");
-		//for (i= 0; i< j; i++)
-		//{
-			System.out.println(getResp());
-		//}
+		//int r = p.getNresp();
+
+		for (i= 0; i< r; i++)
+		{
+			System.out.println(responsibilities[i]);
+		}
 			return "";
 	}	
 
