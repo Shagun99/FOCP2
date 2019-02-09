@@ -3,11 +3,11 @@
    Purpose: 
 */
 
-package ncu.assignment;
+package com.ncu.assignment.project;
 
-//import ncu.assignment.Date;
+import com.ncu.assignment.date.*;
 
-class Project
+public class Project
 {
 
 	String name;
@@ -17,7 +17,7 @@ class Project
 	String role;
 	String[] responsibilities;
 
-	Project(String name, int startday, int startmonth, int startyear, int endday, int endmonth, int endyear, String role, int j)
+	public Project(String name, int startday, int startmonth, int startyear, int endday, int endmonth, int endyear, String role, int j)
 	{
 		this.name = name;
 		this.startDate = new Date(startday, startmonth, startyear);
@@ -26,7 +26,7 @@ class Project
 		this.responsibilities = new String[j];
 		this.r = j;
 	}
-	Project()
+	public Project()
 	{
 		this.name = "";
 		this.startDate = new Date(01,01,2000);

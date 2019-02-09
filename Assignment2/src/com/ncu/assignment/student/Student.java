@@ -3,16 +3,15 @@
    Purpose:  
 */
 
-package ncu.assignment;
-/*
-import ncu.assignment.Date;
-import ncu.assignment.Project;
-import ncu.assignment.Qualification;
-import ncu.assignment.Student;
-import ncu.assignment.Address;
-*/
+package com.ncu.assignment.student;
 
-class Student
+import com.ncu.assignment.date.*;
+import com.ncu.assignment.project.*;
+import com.ncu.assignment.qualification.*;
+//import com.ncu.assignment.student.*;
+import com.ncu.assignment.address.*;
+
+public class Student
 {
 
 	String firstName;
@@ -29,7 +28,7 @@ class Student
 	String contactNo;
 	int k;
 
-	Student(String firstName, String lastName, String line1, String line2, String city, String state, int pinCode, int monthdob, int daydob, int yeardob, /*String skills, String qualName, String university, String institute, float cgpa, int startmonth, int startday, int startyear, String name, int endmonth, int endday, int endyear, String role, String responsibilities,*/ String eMail, String contactNo, int s, int p, int q)
+	public Student(String firstName, String lastName, String line1, String line2, String city, String state, int pinCode, int monthdob, int daydob, int yeardob, /*String skills, String qualName, String university, String institute, float cgpa, int startmonth, int startday, int startyear, String name, int endmonth, int endday, int endyear, String role, String responsibilities,*/ String eMail, String contactNo, int s, int p, int q)
 	{
 	this.firstName = firstName;
 	this.lastName = lastName;
@@ -42,7 +41,7 @@ class Student
 	this.contactNo = contactNo;
 	}
 
-	Student(String firstName, String lastName, String line1, String line2, String city, String state, int pinCode, int monthdob, int daydob, int yeardob, /*String skills, String qualName, String university, String institute, float cgpa,*/ String eMail, String contactNo, int s, int q)
+	public Student(String firstName, String lastName, String line1, String line2, String city, String state, int pinCode, int monthdob, int daydob, int yeardob, /*String skills, String qualName, String university, String institute, float cgpa,*/ String eMail, String contactNo, int s, int q)
 	{
 	this.firstName = firstName;
 	this.lastName = lastName;
